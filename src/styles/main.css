@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 @import "./reset_styles.css";
-
+@import "./mediaQueries.css";
 :root {
   --primary-yellow: #ffd100;
   --primary-white: #fff;
@@ -174,13 +174,14 @@ body {
 
 .mainbody__products-container {
   margin: 30px;
-  gap: 60pt;
+  gap: 40pt;
   display: flex;
   justify-content: space-around;
   width: 90%;
+  flex-wrap: wrap;
 }
 .mainbody__product-item {
-  width: 33.33%;
+  width: 30%;
   text-align: left;
   display: flex;
   flex-direction: column;
