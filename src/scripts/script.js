@@ -45,16 +45,22 @@ function Renderer() {
       const image = document.createElement("img");
       image.src = product.image;
       image.alt = product.name;
-
+      image.setAttribute("aria-label", `product image. name ${product.name}`);
       const productTextContainer = document.createElement("div");
       productTextContainer.classList.add("product-text");
 
       const productH2 = document.createElement("h2");
       productH2.innerText = product.name;
+      productH2.setAttribute("aria-label", `product title. ${product.name}`);
       const productH4 = document.createElement("h4");
+      productH4.setAttribute(
+        "aria-label",
+        `product ${product.name}. colour  ${product.colour}. `
+      );
       productH4.innerText = product.colour;
       const productDesc = document.createElement("p");
       productDesc.innerText = product.desc;
+      productDesc.setAttribute("aria-label", "product description");
 
       const shopBtnContainer = document.createElement("div");
       shopBtnContainer.classList.add("shop-btn");
