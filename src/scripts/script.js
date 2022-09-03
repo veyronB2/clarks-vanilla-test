@@ -45,7 +45,7 @@ function Renderer() {
       const image = document.createElement("img");
       image.src = product.image;
       image.alt = product.name;
-      image.setAttribute("aria-label", `product image. name ${product.name}`);
+      image.setAttribute("aria-label", `product image. ${product.name}`);
       const productTextContainer = document.createElement("div");
       productTextContainer.classList.add("product-text");
 
@@ -55,31 +55,23 @@ function Renderer() {
       const productH4 = document.createElement("h4");
       productH4.setAttribute(
         "aria-label",
-        `product ${product.name}. colour  ${product.colour}. `
+        `${product.name} colour.  ${product.colour}. `
       );
       productH4.innerText = product.colour;
       const productDesc = document.createElement("p");
       productDesc.innerText = product.desc;
-      productDesc.setAttribute("aria-label", "product description");
-
-      const shopBtnContainer = document.createElement("div");
-      shopBtnContainer.classList.add("shop-btn");
-      const productButtonContainer = document.createElement("div");
-      productButtonContainer.classList.add("btn");
-      productButtonContainer.classList.add("product-btn");
 
       const productLink = document.createElement("a");
+      productLink.classList.add("btn");
+      productLink.classList.add("product-btn");
       productLink.href = "#";
       productLink.role = `shop ${product.name}`;
       productLink.innerText = `shop ${product.name}`;
 
-      productButtonContainer.appendChild(productLink);
-      shopBtnContainer.appendChild(productButtonContainer);
-
       productTextContainer.append(productH2, productH4, productDesc);
 
       imageContainer.append(image, productTextContainer);
-      productContainer.append(imageContainer, shopBtnContainer);
+      productContainer.append(imageContainer, productLink);
 
       mainBodyProductsContainer.appendChild(productContainer);
     });
