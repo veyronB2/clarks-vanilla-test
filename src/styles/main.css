@@ -221,15 +221,21 @@ body {
 }
 
 /******************** Media queries ************************************/
+@media (max-width: 2081px) {
+  .mainbody__container {
+    width: 85%;
+  }
+}
+
 @media (max-width: 1978px) {
   .mainbody__container {
-    width: 75%;
+    width: 95%;
   }
 
   .mainbody__products-container {
     margin: 0 auto;
     gap: 2rem;
-    width: 75%;
+    width: 95%;
   }
 }
 
@@ -240,10 +246,6 @@ body {
 }
 
 @media (max-width: 1384px) {
-  .mainbody__container {
-    width: 90%;
-  }
-
   .mainbody__products-container {
     margin: 0 auto;
     gap: 2rem;
@@ -276,13 +278,7 @@ body {
   }
 }
 
-@media (max-width: 1000px) {
-  .mainbody__container {
-    width: 95%;
-  }
-}
-
-@media (max-width: 810px) {
+@media (max-width: 840px) {
   .mainbody__container {
     width: 100%;
   }
