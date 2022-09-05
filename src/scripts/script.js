@@ -10,7 +10,7 @@ const initialState = {
   products: [],
 };
 
-function stateControl() {
+function stateManager() {
   let state = initialState;
   function initializeState() {
     state = {
@@ -45,19 +45,15 @@ function Renderer() {
       const image = document.createElement("img");
       image.src = product.image;
       image.alt = product.name;
-      image.setAttribute("aria-label", `product image. ${product.name}`);
       const productTextContainer = document.createElement("div");
       productTextContainer.classList.add("product-text");
 
       const productH2 = document.createElement("h2");
       productH2.innerText = product.name;
-      productH2.setAttribute("aria-label", `product title. ${product.name}`);
-      const productH4 = document.createElement("h4");
-      productH4.setAttribute(
-        "aria-label",
-        `${product.name} colour.  ${product.colour}. `
-      );
-      productH4.innerText = product.colour;
+
+      const productH3 = document.createElement("h3");
+
+      productH3.innerText = product.colour;
       const productDesc = document.createElement("p");
       productDesc.innerText = product.desc;
 
@@ -68,7 +64,7 @@ function Renderer() {
       productLink.role = `shop ${product.name}`;
       productLink.innerText = `shop ${product.name}`;
 
-      productTextContainer.append(productH2, productH4, productDesc);
+      productTextContainer.append(productH2, productH3, productDesc);
 
       imageContainer.append(image, productTextContainer);
       productContainer.append(imageContainer, productLink);
@@ -92,7 +88,7 @@ function Renderer() {
 function runVanilla() {
   const products = fetchProducts();
 
-  const state = stateControl();
+  const state = stateManager();
   state.initializeState(products);
 
   const renderer = Renderer();

@@ -52,6 +52,14 @@ body {
 /* Add your css rules here */
 
 /* global styles */
+.mainbody__container h1 {
+  text-transform: uppercase;
+  color: var(--primary-yellow);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 2.6rem;
+}
+
 .mainbody__container h2 {
   text-transform: uppercase;
   color: var(--primary-yellow);
@@ -59,7 +67,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.mainbody__container h4 {
+.mainbody__container h3 {
   font-size: 1.4rem;
   color: var(--primary-yellow);
   text-transform: uppercase;
@@ -290,11 +298,15 @@ body {
     width: 100%;
   }
 
-  .product-text > h2 {
+  #mainbody__collection-title {
     font-size: 2rem;
   }
 
-  .product-text > h4 {
+  .product-text > h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-text > h3 {
     font-size: 1.2rem;
   }
 
@@ -323,16 +335,20 @@ body {
     width: 95%;
   }
 
+  #mainbody__collection-title {
+    font-size: 1.5rem;
+  }
+
   .mainbody__collection-title {
     font-size: 1.5rem;
   }
 
   .product-text > h2 {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
   }
 
-  .product-text > h4 {
-    font-size: 1.4rem;
+  .product-text > h3 {
+    font-size: 1rem;
   }
 
   .product-text > p {
